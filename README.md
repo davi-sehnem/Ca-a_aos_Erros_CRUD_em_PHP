@@ -10,5 +10,5 @@ Aqui falta o ";" também.
 Aqui falta o ";" também.
 
 ## O link de editar na tabela
-``` <a href="index.php?excluir=<?= $usuario['id'] ?>"> Excluir </a>
+``` <a href="index.php?excluir=<?= $usuario['id'] ?>"> Excluir </a> ```
 Antes ou depois do excluir falta colocar o editar.
