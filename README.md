@@ -1,5 +1,7 @@
 # Caça aos Erros: CRUD em PHP
 
+```
+
 <?php
 
 $host = "localhost";
@@ -141,3 +143,5 @@ $resultado = $conn->query($sql)
 </body>
 
 </html>
+
+```
