@@ -6,13 +6,13 @@
 
 $host = "localhost";
 $user = "root";
-$password = "";
+$password = ""; **<------- falta o root**
 $database = "crud_aula";
 
 $conn = new mysqli($host, $user, $password, $database);
 
 if ($conn->connect_error) {
-    die("Erro na conexão: " . $conn->connect_error)
+    die("Erro na conexão: " . $conn->connect_error) **<------- falta o ponto e virgula**
 }
 
 // CADASTRAR
@@ -56,7 +56,7 @@ if (isset($_POST['editar'])) {
     $sql = "UPDATE usuarios SET nome = ?, email = ? WHERE id = ?";
     $stmt = $conn->prepare($sql);
 
-    $stmt->bind_param("ssi", $nome, $email, $id)
+    $stmt->bind_param("ssi", $nome, $email, $id) **<------- falta o ponto e virgula**
     $stmt->execute();
 
     header("Location: index.php");
@@ -127,6 +127,10 @@ $resultado = $conn->query($sql)
                 </td>
 
                 <td>
+
+                    **<a href="public/editar.php?id=<?= $usuario['id'] ?>">
+                        Editar
+                    </a>** **<--faltando o editar **
 
                     <a href="index.php?excluir=<?= $usuario['id'] ?>">
                         Excluir
