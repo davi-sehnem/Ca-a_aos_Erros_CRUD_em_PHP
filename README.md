@@ -9,5 +9,6 @@ Aqui falta o ";" também.
 ## $resultado = $conn->query($sql)
 Aqui falta o ";" também.
 
-``` <a href="index.php?excluir=<?= $usuario['id'] ?>"> Excluir </a> ```
+## O link de editar na tabela
+``` <a href="index.php?excluir=<?= $usuario['id'] ?>"> Excluir </a>
 Antes ou depois do excluir falta colocar o editar.
