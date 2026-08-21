@@ -1,10 +1,10 @@
 <?php
 
  session_start();
-    include("../database/conexao.php");
+    include("../../database/conexao.php");
 
     if (!isset($_SESSION["usuario"])) {
-        header("Location: index.php");
+        header("Location: ../index.php");
         exit();
     }
 
@@ -27,7 +27,7 @@
       mysqli_stmt_bind_param($stmt, "ssi", $novoNome, $novoEmail, $id);
 
         if (mysqli_stmt_execute($stmt)) {
-            header("Location:../codigo_1/index.php");
+            header("Location: ../index.php");
             exit();
         } else {
             echo "<script>alert('Erro: usuario inválido!')</script>";

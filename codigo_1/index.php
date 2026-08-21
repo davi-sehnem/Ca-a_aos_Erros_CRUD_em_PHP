@@ -99,7 +99,7 @@ $resultado = $conn->query($sql);
                 </td>
 
                 <td>
-                    <a href="../public/editar.php?id=<?= $usuario['id'] ?>">
+                    <a href="public/editar.php?id=<?= $usuario['id'] ?>">
                         Editar
                     </a>
                 
