@@ -43,6 +43,27 @@ Mas aqui existem 5 valores.
 Falta colocar o "estoque = ?".
 
 ## Erro 4: Tipo incorreto do preço no cadastro
+``` step="0.01" ```
+O formulario possui step="0.01".
+
+<br>
+
+O correto é usar o double.
+```$stmt->bind_param( "ssdi", $nome, $categoria, $preco, $estoque);```
+
+## Erro 5: Edição depende de atualizar
+``` if (isset($_POST['atualizar'])) { ```
+O problema é que não tem esse campo atualizar sendo eviado pelo formulário.
+
+<br>
+
+Então o formulário envia 'cadastrar' e não 'atualizar':
+```<button type="submit" name="cadastrar">Cadastrar Produto</button>```
+
+## Erro 6: Falta de edição
+O código não tem interface funcional nem ação disponivel para fazer edição.
+
+
 
 
 
